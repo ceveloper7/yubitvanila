@@ -1,8 +1,20 @@
 /* *************** Custom properties ********************* */
 :root {
-  --primary: #005ea2;
 
-  --secondary: #d83933;
+  /*light colors*/
+  --light-color: #f9fafb;
+  --text-light-color: #16191d;
+  --link-light-color: #08c;
+  --border-light-color: #f2f2f2;
+
+  /*dark colors*/
+  --dark-color: #1f2937;
+  --text-dark-color: #e7e9ea;
+  --link-dark-color: #73cffa;
+  --border-dark-color: #586474;
+
+  --primary: #e7562e;
+  --secondary: #e7762e;
 
   --ink: #1b1b1b;
 }
@@ -132,4 +144,22 @@ video {
 
 .nav-menu-list a[class~="ofertas"] {
   color: red;
+}
+
+/*selector universal*/
+.nav-menu-list *{
+  font-size: 18px;
+}
+
+/*pseudoclase*/
+.nav-search-input:focus{
+  background-color: var(--light-color);
+}
+
+.nav-menu-list a:visited{
+  color: var(--dark-color)
+}
+
+.nav-menu-list a:hover{
+  color: var(--light-color);
 }
