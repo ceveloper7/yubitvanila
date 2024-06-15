@@ -1,6 +1,5 @@
 /* *************** Custom properties ********************* */
 :root {
-
   /*light colors*/
   --light-color: #f9fafb;
   --text-light-color: #16191d;
@@ -17,6 +16,13 @@
   --secondary: #e7762e;
 
   --ink: #1b1b1b;
+
+  --container-sm: 48em; /*mobile*/
+  --container-md: 62em; /*tablet*/
+  --container-lg: 75em; /*desktop*/
+
+  --main-top: 2rem;
+  --main-bottom: 2rem;
 }
 
 /* ******************** Reset CSS ******************** */
@@ -113,53 +119,34 @@ video {
   }
 }
 
-.nav-header {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  background-color: var(--primary);
-  border: 0;
+/* ********* user styles ************** */
+
+header {
+  border: dotted red medium;
+}
+
+.header-container {
+  border: solid yellow thick;
+}
+
+.search-container{
+  display: inline-block;
+}
+
+.search-form {
+  position: absolute;
+}
+
+.search-form input{
   position: relative;
+  width: 300px;
+  margin: 0;
 }
 
-/* estilos a hijos directos*/
-.nav-header > section {
-}
-
-/*estilo a hijo descendiente*/
-.nav-header .nav-header-menu {
-}
-.nav-header li {
-  color: var(--ink);
-}
-
-/*estilo hermano general*/
-.nav-menu-item ~ li {
-  color: var(--secondary);
-}
-/* selector de atributo */
-.nav-menu-list a[href] {
-  text-decoration: none;
-}
-
-.nav-menu-list a[class~="ofertas"] {
-  color: red;
-}
-
-/*selector universal*/
-.nav-menu-list *{
-  font-size: 18px;
-}
-
-/*pseudoclase*/
-.nav-search-input:focus{
-  background-color: var(--light-color);
-}
-
-.nav-menu-list a:visited{
-  color: var(--dark-color)
-}
-
-.nav-menu-list a:hover{
-  color: var(--light-color);
+.search-form button{
+  width: 35px;
+  height: 21px;
+  position: absolute;
+  top: 3px;
+  right: -35px;
 }
